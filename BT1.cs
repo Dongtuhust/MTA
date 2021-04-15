@@ -2,6 +2,7 @@ using System;
 
 class MainClass {
   public static void Main (string[] args) {
+    try{
         int i = 1;
         int sum = 0;
         while(i <= 100)
@@ -31,6 +32,10 @@ class MainClass {
         float cost = phoneCost(minus,type);
         Console.WriteLine("Phone Cost: "+ (cost+27000)*110/100 + "đ");
         Console.WriteLine("VAT: "+ (cost+27000)*10/100 + "đ");
+    }catch (Exception e){
+      Console.WriteLine("================" + e);
+    }
+      
   }
 
   public static float phoneCost(int minus, int type){
